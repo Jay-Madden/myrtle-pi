@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myrtle Sound board</title>
+	<link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Myrtle Sounds!!</h1>
+	<ul id="navigation">
+	{% for sound in sounds %}
+        <li><a href="/api/sound/{{ sound }}">{{ sound }}</a></li>
+    {% endfor %}
+    </ul>
+    {{ id }}
+
+	{%- if msg -%}
+	<p>
+		<b>Status:</b> {{ msg }}
+	</p>
+	{%- endif %}
+</body>
+</html>
